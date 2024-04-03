@@ -1,3 +1,6 @@
 #!/bin/bash
 
-xcodebuild test -project MyApp.xcodeproj -scheme MyApp -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=latest'
+SCHEME='MyApp'
+DESTINATION='platform=iOS Simulator,OS=latest,name=iPhone 15'
+
+xcodebuild test -scheme $SCHEME -destination "$DESTINATION"
